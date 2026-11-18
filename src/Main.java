@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         List<Product> products = new ArrayList<>();
+        List<Category> categories = new ArrayList<>();
+        CommerceSystem system = new CommerceSystem(categories);
+
         Product product1 = new Product(
                 " Galaxy S25 ",1200000,
                 "최신 안드로이드 스마트폰",1);
@@ -24,7 +27,11 @@ public class Main {
         products.add(product3);
         products.add(product4);
 
-        CommerceSystem system = new CommerceSystem(products);
+        Category category1 = new Category("전자제품", products);
+        categories.add(category1);
+
+
+
         system.start();
     }
 }
