@@ -6,32 +6,31 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<Product> products = new ArrayList<>();
-        List<Category> categories = new ArrayList<>();
-        CommerceSystem system = new CommerceSystem(categories);
+        List<Product> electronicsProducts = new ArrayList<>(); // 전자제품 리스트
+        List<Product> clothingProducts = new ArrayList<>();  // 의류 리스트
+        List<Product> foodProducts = new ArrayList<>(); // 식품 리스트
+        List<Category> categories = new ArrayList<>(); // 카테고리 리스트
 
-        Product product1 = new Product(
-                " Galaxy S25 ",1200000,
-                "최신 안드로이드 스마트폰",1);
-        Product product2= new Product(
-                "iPhone 16", 1350000,
-                "Apple의 최신 스마트폰", 5);
-        Product product3 = new Product(
-                "MacBook Pro", 2400000,
-                "M3 칩셋이 탑재된 노트북", 3);
-        Product product4= new Product(
-                "AirPods Pro", 350000,
-                "노이즈 캔슬링 무선 이어폰", 20);
-        products.add(product1);
-        products.add(product2);
-        products.add(product3);
-        products.add(product4);
+        electronicsProducts.add(new Product(
+                " Galaxy S25 ",1200000, "최신 안드로이드 스마트폰",1));
+        electronicsProducts.add(new Product(
+                "iPhone 16", 1350000, "Apple의 최신 스마트폰", 5));
+        electronicsProducts.add(new Product(
+                "MacBook Pro", 2400000, "M3 칩셋이 탑재된 노트북", 3));
+        electronicsProducts.add(new Product(
+                "AirPods Pro", 350000, "노이즈 캔슬링 무선 이어폰", 20));
+        clothingProducts.add(new Product(
+                "반팔 티셔츠", 25000, "면 소재 반팔", 10));
+        clothingProducts.add(new Product(
+                "청바지", 49000, "데님 팬츠", 5));
 
-        Category category1 = new Category("전자제품", products);
+
+        Category category1 = new Category("전자제품", electronicsProducts);
         categories.add(category1);
+        Category category2 = new Category("의류",clothingProducts);
+        categories.add(category2);
 
-
-
+        CommerceSystem system = new CommerceSystem(categories);
         system.start();
     }
 }
