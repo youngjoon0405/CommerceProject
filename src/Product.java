@@ -1,9 +1,9 @@
 public class Product {
 
-    String productName; // 상품명
-    int price; // 가격
-    String description; // 설명
-    int stockQuantity; // 재고수량
+   private String productName; // 상품명
+   private int price; // 가격
+   private String description; // 설명
+    private int stockQuantity; // 재고수량
 
    public Product(String productName, int price, String description, int stockQuantity ) {
         this.productName = productName;

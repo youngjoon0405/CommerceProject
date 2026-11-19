@@ -1,8 +1,8 @@
 public class Customer {
 
-    String customerName;
-    String email;
-    String lavel;
+    private String customerName;
+    private String email;
+    private String lavel;
 
 
 
